@@ -3,7 +3,6 @@
 
 (c) 2021 Куликов Никита, Санкт-Петербург, Россия
 e-mail: pocketkurt@gmail.com
-vk: https://vk.com/nikita_kulikov
 """
 
 
