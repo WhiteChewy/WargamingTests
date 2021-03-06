@@ -40,6 +40,12 @@ class CycledBuffer(collections.MutableSequence):
             CycledBuffer.__shift(self)
             self.buff[-1] = value
 
+    def append(self, value):
+        self.insert(value)
+
+    def reverse(self):
+        return self.buff.reverse()
+
 
 x = CycledBuffer()
 print(x)
@@ -59,20 +65,8 @@ x.insert(7)
 print(x)
 x.insert(8)
 print(x)
-print(x.pop())
+x.append(8)
 print(x)
-print(x.pop())
+x.extend([10, 11, 12])
 print(x)
-print(x.pop())
-print(x)
-print(x.pop())
-print(x)
-print(x.slots)
-x.insert(9)
-print(x)
-print(x.slots)
-x.insert(10)
-print(x)
-print(x.slots)
-print(x.pop())
 print(x)
