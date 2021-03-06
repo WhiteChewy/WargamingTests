@@ -50,12 +50,12 @@ __*пирамидальная сортировка*__.
 Если задать массив 20 тысяч элементов на вход работа фукнций будет следующей
 
 
-#####counting_sort.py (разброс значений с -50 до 50)
+***counting_sort.py (разброс значений с -50 до 50)***
 
 ![alt text](https://github.com/WhiteChewy/WargamingTests/blob/master/Test_3/counting_sort20k.PNG "20,000 элементов")
 
 
-#####heap_sort.py (разброс значений с -50 до 50)
+***heap_sort.py (разброс значений с -50 до 50)***
 
 ![alt text](https://github.com/WhiteChewy/WargamingTests/blob/master/Test_3/heap_sort20k.PNG "20,000 элементов")
 
@@ -63,12 +63,12 @@ __*пирамидальная сортировка*__.
 что разброс значений будет меньше размера массива? Заодно увеличим количество элементов в массиве до 100,000
 
 
-#####counting_sort.py (разброс значений с -1 миллона до 1 миллиона)
+***counting_sort.py (разброс значений с -1 миллона до 1 миллиона)***
 
 ![alt text](https://github.com/WhiteChewy/WargamingTests/blob/master/Test_3/counting_sort100kbigrange.PNG "100,000 элементов")
 
 
-#####heap_sort.py (разброс значений с -1 миллиона до 1 миллиона)
+***heap_sort.py (разброс значений с -1 миллиона до 1 миллиона)***
 
 ![alt text](https://github.com/WhiteChewy/WargamingTests/blob/master/Test_3/heap_sort100kbigrange.PNG "100,000 элементов")
 
