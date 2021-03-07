@@ -1,10 +1,10 @@
+# -*- coding: utf-8 -*-
 """
 Реализация циклического буфера FIFO (first in first out) через ABC Mutable Sequence
 
 (c) 2021 Куликов Никита, Санкт-Петербург, Россия
 e-mail: pocketkurt@gmail.com
 """
-# -*- coding: utf-8-*-
 import collections
 
 
@@ -19,8 +19,8 @@ class CycledBuffer(collections.MutableSequence):
         self.size = size
         self.slots = self.size
 
-    def __delitem__(self, key):
-        pass
+    def __delitem__(self):
+        return self.buff.pop()
 
     def __getitem__(self, item):
         res = self.buff[0]
@@ -33,7 +33,7 @@ class CycledBuffer(collections.MutableSequence):
         return len(self.buff)
 
     def __setitem__(self, key, value):
-        pass
+        raise NotImplementedError("You can't change values inside the buffer.")
 
     def __str__(self):
         return str(self.buff)

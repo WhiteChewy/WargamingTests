@@ -1,10 +1,4 @@
-"""
-Реализация циклического буфера FIFO (first in first out) через list
 
-(c) 2021 Куликов Никита, Санкт-Петербург, Россия
-e-mail: pocketkurt@gmail.com
-"""
-# -*- coding: utf-8-*-
 
 
 class CycleBuffer(list):
