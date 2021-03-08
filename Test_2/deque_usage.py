@@ -9,13 +9,16 @@ e-mail: pocketkurt@gmail.com
 from collections import deque
 
 
-class CycledBuffer:
+class CycledBuffer(object):
 
     def __init__(self, size=5):
         self.__buffer = deque(maxlen=size)
 
     def __str__(self):
         return str(list(self.__buffer))
+
+    def __len__(self):
+        return len(self.__buffer)
 
     def append(self, value):
         self.__buffer.append(value)
@@ -27,24 +30,12 @@ class CycledBuffer:
         self.__buffer.clear()
 
     def pop(self):
+        if self.isEmpty():
+            raise IndexError("Pop from empty buffer.")
         return self.__buffer.popleft()
 
+    def getEmptySlots(self):
+        return self.__buffer.maxlen - len(self.__buffer)
 
-x = CycledBuffer()
-x.append(1)
-print(x)
-x.append(2)
-print(x)
-x.append(3)
-print(x)
-x.append(4)
-print(x)
-x.append(5)
-print(x)
-x.append(6)
-print(x)
-print(x.pop())
-print(x.isEmpty())
-print(x)
-print(x.clear())
-print(x)
+    def getMaxLen(self):
+        return self.__buffer.maxlen
