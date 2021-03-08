@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Реализация циклического буфера FIFO (first in first out) через ABC Mutable Sequence
+Реализация циклического буфера FIFO (first in first out) с использованием стандартного типа list
 
 (c) 2021 Куликов Никита, Санкт-Петербург, Россия
 e-mail: pocketkurt@gmail.com

@@ -41,6 +41,8 @@ class CycledBuffer(list):
 
     # получение объекта из буффера
     def pop(self):
+        if self.isEmpty():
+            raise IndexError("Pop from empty buffer.")
         item = self[0]
         self.__shift()
         super(CycledBuffer, self).pop()
