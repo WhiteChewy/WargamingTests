@@ -30,7 +30,7 @@ class CycledBuffer(collections.MutableSequence):
         return res
 
     def __len__(self):
-        return len(self.buff)
+        return self.size
 
     def __setitem__(self, key, value):
         raise NotImplementedError("You can't change values inside the buffer.")
@@ -75,5 +75,4 @@ print(x)
 x.append(8)
 print(x)
 x.extend([10, 11, 12])
-print(x)
 print(x)
