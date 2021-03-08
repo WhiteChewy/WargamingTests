@@ -12,27 +12,22 @@ from collections import deque
 class CycledBuffer:
 
     def __init__(self, size=5):
-        self.buf = deque(maxlen=size)
-        self.slots = self.buf.maxlen
+        self.__buffer = deque(maxlen=size)
 
     def __str__(self):
-        return str(list(self.buf))
+        return str(list(self.__buffer))
 
     def append(self, value):
-        self.buf.append(value)
-        if self.slots != 0:
-            self.slots -= 1
+        self.__buffer.append(value)
 
     def isEmpty(self):
-        return not bool(self.buf)
+        return not bool(self.__buffer)
 
     def clear(self):
-        self.buf.clear()
-        self.slots = self.buf.maxlen
+        self.__buffer.clear()
 
     def pop(self):
-        self.slots += 1
-        return self.buf.popleft()
+        return self.__buffer.popleft()
 
 
 x = CycledBuffer()
