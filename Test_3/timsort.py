@@ -9,3 +9,7 @@
 (c) 2021 Куликов Никита, Санкт-Петербург, Россия
 e-mail: pocketkurt@gmail.com
 """
+
+
+def timsort(array):
+    return array.sort()
